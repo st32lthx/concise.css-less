@@ -36,30 +36,18 @@
 // create styles that are built from the ground-up to be 
 // mobile friendly.
 // 
-//    `.breakpoint(extra-small) { [styles here] }`
+//    `@media @medium { styles here }`
 // 
 // 
-.breakpoint(@point) {
-	@if @point == extra-small {
-        @media (min-width: @extra-small-start)  { @content; }
-    }
-	
-	@else if @point == small {
-        @media (min-width: @small-start)  { @content; }
-    }
-	
-	@else if @point == medium {
-        @media (min-width: @medium-start) { @content; }
-    }
-	
-	@else if @point == large {
-        @media (min-width: @large-start) { @content; }
-    }
-	
-    @else if @point == extra-large {
-        @media (min-width: @extra-large-start) { @content; }
-    }
-}
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@extra-small: ~"only screen and (max-width:"@extra-small-start")";
+@small: ~"only screen and (min-width:"@small-start")";
+@medium: ~"only screen and (min-width:"@medium-start")";
+@large: ~"only screen and (min-width:"@large-start")";
+@extra-large: ~"only screen and (min-width:"@extra-large-start")";
 
 
 //
