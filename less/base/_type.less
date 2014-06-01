@@ -1,15 +1,15 @@
-@if $use-typography == true {
+@if @use-typography == true {
     //------------------------------------//
     //  $TYPE
     //------------------------------------//
     // Links
     a {
-        color: $base-link-color; 
+        color: @base-link-color; 
         text-decoration: none;
         
         &:hover, 
 		&:visited {
-            color: lighten($base-link-color, 10%);
+            color: lighten(@base-link-color, 10%);
             cursor: pointer;
             text-decoration: underline;
         }
@@ -25,11 +25,11 @@
     // Sizing
     small, 
 	.small {
-        @include font-size($small-size); 
+        .font-size(@small-size); 
     }
 
     .mico { 
-        @include font-size($micro-size); 
+        .font-size(@micro-size); 
     }
 
 

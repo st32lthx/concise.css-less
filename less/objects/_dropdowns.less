@@ -1,4 +1,4 @@
-@if $use-dropdowns == true {
+@if @use-dropdowns == true {
     //------------------------------------//
     //  $DROPDOWNS
     //------------------------------------//
@@ -22,7 +22,7 @@
             text-transform: none;
             z-index: 99999;
             
-            @include vendor(transition, all 0.3s ease-in);
+            .vendor(transition, all 0.3s ease-in);
             
             a { text-decoration: none; }
             
@@ -56,15 +56,15 @@
                 display: block;
                 padding: 5px 10px;
                 
-                @include vendor(transition, all 0.3s ease-out);
+                .vendor(transition, all 0.3s ease-out);
             }
             
             
             // Rounded corners
             &.border-radius li {
-                &:first-of-type { border-radius: $border-radius $border-radius 0 0; }
+                &:first-of-type { border-radius: @border-radius @border-radius 0 0; }
                 
-                &:last-of-type { border-radius: 0 0 $border-radius $border-radius; }
+                &:last-of-type { border-radius: 0 0 @border-radius @border-radius; }
             }
             
             li:hover { background-color: #f3f8f8; }
@@ -80,13 +80,13 @@
             cursor: default;
             font-size: 14px;
             font-size: 0.9rem;
-            @include font-size(14px); 
+            .font-size(14px); 
             margin: 12px 0 0;
             padding: 0 0 0 9px;
         }
     }
 
-    @include breakpoint(small) {
+    .breakpoint(small) {
         .dropdown {
             .dropdown-menu { width: 200px; }
             
@@ -106,7 +106,7 @@
         .header:hover, 
 		li.header:hover { background: none; }
         
-        .dropdown-menu.border-radius { border-radius: $border-radius; }
+        .dropdown-menu.border-radius { border-radius: @border-radius; }
         
         
         // Arrows 

@@ -1,4 +1,4 @@
-@if $use-grid == true {
+@if @use-grid == true {
     //------------------------------------//
     //  $GRID
     //------------------------------------//
@@ -12,54 +12,54 @@
         }
     }
 
-    [class*='#{$column-prefix}'] {
-        @include vendor(background-clip, padding-box !important);
+    [class*='#{@column-prefix}'] {
+        .vendor(background-clip, padding-box !important);
         
 		&.right { float: right; }
 		
         img { max-width: 100%; }
     }
 
-    @include breakpoint(small) {
-        [class*='#{$column-prefix}'] { float: left; }
+    .breakpoint(small) {
+        [class*='#{@column-prefix}'] { float: left; }
         
-        .gutters [class*='#{$column-prefix}'] {
-            margin-left: $gutters;
+        .gutters [class*='#{@column-prefix}'] {
+            margin-left: @gutters;
             
             &:first-child { margin-left: 0; }
         }
         
         
         // Row columns        
-		@include grid-setup();
+		.grid-setup();
         
-        @if $use-push == true {
+        @if @use-push == true {
 			// Push
 			[class*='push-'] { position: relative; }
 			
-			@include push-setup(); 
+			.push-setup(); 
 		}
         
-        @if $use-pull == true {
+        @if @use-pull == true {
 			// Pull
 			[class*='pull-'] { position: relative; }
 			
-			@include pull-setup();
+			.pull-setup();
 		}
     }
 
 
     // Non-responsive grid
     .non-responsive {
-        [class*='#{$column-prefix}'] {
+        [class*='#{@column-prefix}'] {
             float: left;
             width: auto !important; 
         }
         
-        .gutters [class*='#{$column-prefix}'], 
-		&.gutters [class*='#{$column-prefix}'] { margin-left: $gutters; }
+        .gutters [class*='#{@column-prefix}'], 
+		&.gutters [class*='#{@column-prefix}'] { margin-left: @gutters; }
         
-        .gutters [class*='#{$column-prefix}']:first-child, 
-		&.gutters [class*='#{$column-prefix}']:first-child { margin-left: 0; }
+        .gutters [class*='#{@column-prefix}']:first-child, 
+		&.gutters [class*='#{@column-prefix}']:first-child { margin-left: 0; }
     }
 }
