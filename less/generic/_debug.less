@@ -1,4 +1,4 @@
-@if @debug-mode == true {
+.debug-mode(@boolean) when (@boolean = true) {
 	//------------------------------------//
 	//	@DEBUG
 	//------------------------------------//
@@ -96,3 +96,5 @@
     // You should avoid using IDs for CSS, is this doing any styling?
 	[id]{ outline:5px solid yellow; }
 }
+
+.debug-mode(@debug-mode); 

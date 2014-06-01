@@ -1,4 +1,4 @@
-@if @use-colors == true {
+.use-colors(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $COLORS
     //------------------------------------//
@@ -43,3 +43,5 @@
 
     .color-red { color: @color-red; }
 }
+
+.use-colors(@use-colors); 

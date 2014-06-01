@@ -1,4 +1,4 @@
-@if @use-conditional == true {
+.use-conditional(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $CONDITIONAL
     //------------------------------------//
@@ -68,3 +68,5 @@
         }
     }
 }
+
+.use-conditional(@use-conditional); 

@@ -1,4 +1,4 @@
-@if @use-grid == true {
+.use-grid(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $GRID
     //------------------------------------//
@@ -63,3 +63,5 @@
 		&.gutters [class*='#{@column-prefix}']:first-child { margin-left: 0; }
     }
 }
+
+.use-grid(@use-grid); 

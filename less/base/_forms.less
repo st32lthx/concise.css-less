@@ -1,4 +1,4 @@
-@if @use-forms == true {
+.use-forms(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $FORMS
     //------------------------------------//
@@ -253,3 +253,5 @@
 
     :-moz-placeholder { color: @placeholder-color; }
 }
+
+.use-forms(@use-forms); 

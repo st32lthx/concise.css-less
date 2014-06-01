@@ -1,4 +1,4 @@
-@if @use-wells == true {
+.use-wells(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $WELLS
     //------------------------------------//
@@ -101,3 +101,5 @@
 
     .well .close { margin-top: 6px; }
 }
+
+.use-wells(@use-wells); 

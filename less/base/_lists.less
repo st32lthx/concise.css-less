@@ -1,4 +1,4 @@
-@if @use-lists == true {
+.use-lists(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $LISTS
     //------------------------------------//   
@@ -122,3 +122,5 @@
         }
     }
 }
+
+.use-lists(@use-lists); 

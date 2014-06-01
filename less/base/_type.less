@@ -1,4 +1,4 @@
-@if @use-typography == true {
+.use-typography(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $TYPE
     //------------------------------------//
@@ -62,3 +62,5 @@
         padding: 1px 4px;
     }
 }
+
+.use-typography(@use-typography); 

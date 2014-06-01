@@ -1,4 +1,4 @@
-@if @use-groups == true {
+.use-groups(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $GROUPS
     //------------------------------------//
@@ -99,3 +99,5 @@
         }
     }
 }
+
+.use-groups(@use-groups); 

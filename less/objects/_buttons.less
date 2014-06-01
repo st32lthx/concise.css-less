@@ -1,4 +1,4 @@
-@if @use-buttons == true {
+.use-buttons(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $BUTTONS
     //------------------------------------//
@@ -284,3 +284,5 @@
         }
     }
 }
+
+.use-buttons(@use-buttons); 

@@ -1,4 +1,4 @@
-@if @use-breadcrumbs == true {
+.use-breadcrumbs(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $BREADCRUMBS
     //------------------------------------//
@@ -33,3 +33,5 @@
         &.well { padding-left: 15px; }
     }
 }
+
+.use-breadcrumbs(@use-breadcrumbs); 

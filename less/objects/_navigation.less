@@ -1,4 +1,4 @@
-@if @use-navigation == true {
+.use-navigation(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $NAVIGATION
     //------------------------------------//
@@ -372,3 +372,5 @@
         }
     }
 }
+
+.use-navigation(@use-navigation); 

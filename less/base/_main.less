@@ -1,4 +1,4 @@
-@if @use-main == true {
+.use-main(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $MAIN
     //------------------------------------//
@@ -28,3 +28,5 @@
 
     html[dir="rtl"] { direction: rtl; }
 }
+
+.use-main(@use-main); 

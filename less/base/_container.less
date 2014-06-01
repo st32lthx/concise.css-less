@@ -1,4 +1,4 @@
-@if @use-container == true {
+.use-container(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $CONTAINER
     //------------------------------------//
@@ -12,3 +12,5 @@
 
     .breakpoint(extra-large) { .container { width: 1140px; } }
 }
+
+.use-container(@use-container); 

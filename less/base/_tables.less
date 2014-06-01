@@ -1,4 +1,4 @@
-@if @use-tables == true {
+.use-tables(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $TABLES
     //------------------------------------//
@@ -80,3 +80,5 @@
         table { margin-bottom: 0; }
     }
 }
+
+.use-tables(@use-tables); 

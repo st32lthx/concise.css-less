@@ -1,4 +1,4 @@
-@if @use-blockquotes == true {
+.use-blockquotes(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $BLOCKQUOTES
     //------------------------------------//
@@ -34,3 +34,5 @@
         }
     }
 }
+
+.use-blockquotes(@use-blockquotes); 

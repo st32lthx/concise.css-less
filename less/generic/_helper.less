@@ -1,4 +1,4 @@
-@if @use-helper == true {
+.use-helper(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $HELPER
     //------------------------------------//
@@ -111,3 +111,5 @@
     // Pill style
     .pill { border-radius: 25px; }
 }
+
+.use-helper(@use-helper); 

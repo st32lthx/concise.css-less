@@ -1,4 +1,4 @@
-@if @use-headings == true {
+.use-headings(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $HEADINGS
     //------------------------------------//
@@ -152,3 +152,5 @@
         }
     }
 }
+
+.use-headings(@use-headings); 

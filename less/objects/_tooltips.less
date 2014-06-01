@@ -1,4 +1,4 @@
-@if @use-tooltips == true {
+.use-tooltips(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $TOOLTIPS
     //------------------------------------//
@@ -224,3 +224,5 @@
     // Rounded corners
     [class*='hint-'].border-radius:after { border-radius: @border-radius; }
 }
+
+.use-tooltips(@use-tooltips); 

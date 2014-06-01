@@ -1,4 +1,4 @@
-@if @use-dropdowns == true {
+.use-dropdowns(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $DROPDOWNS
     //------------------------------------//
@@ -165,3 +165,5 @@
         }
     }
 }
+
+.use-dropdowns(@use-dropdowns); 

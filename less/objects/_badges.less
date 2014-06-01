@@ -1,4 +1,4 @@
-@if @use-badges == true {
+.use-badges(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $BADGES
     //------------------------------------//
@@ -50,3 +50,5 @@
     .label:empty, 
 	.badge:empty { display: none; }
 }
+
+.use-badges(@use-badges); 

@@ -1,4 +1,4 @@
-@if @use-normalize == true {
+.use-normalize(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $NORMALIZE  
     //------------------------------------// 
@@ -193,3 +193,5 @@
     td, 
     th { padding: 0; }
 }
+
+.use-normalize(@use-normalize); 

@@ -1,4 +1,4 @@
-@if @use-shared == true {
+.use-shared(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $SHARED
     //------------------------------------//
@@ -35,3 +35,5 @@
         margin-left: (2 * @base-spacing-unit / @base-font-size) * 1rem;
     }
 }
+
+.use-shared(@use-shared); 

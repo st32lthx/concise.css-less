@@ -1,4 +1,4 @@
-@if @use-clearfix == true {
+.use-clearfix(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $CLEARFIX
     //------------------------------------//
@@ -10,3 +10,5 @@
         }
     }
 }
+
+.use-clearfix(@use-clearfix); 
