@@ -5,13 +5,12 @@
 //    `.font-size(24px);`
 // 
 // 
-@mixin font-size(@font-size, @line-height:true) {
-    font-size: @font-size;
-    font-size: (@font-size / @base-font-size) * 1rem;
+.font-size(@font-size) {
+    @pxValue: (@font-size);
+	@remValue: (@font-size / @base-font-size) * 1rem;
 	
-    @if @line-height == true {
-        line-height: ceil(@font-size / @base-line-height) * (@base-line-height / @font-size);
-    }
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}";
 }
 
 
@@ -22,7 +21,7 @@
 //    `.vendor(border-radius, 4px);`
 // 
 // 
-@mixin vendor(@property, @value...) {
+.vendor(@property, @value...) {
 	-webkit-#{@property}: @value;
 	-moz-#{@property}: @value;
 	-ms-#{@property}: @value;
@@ -40,7 +39,7 @@
 //    `.breakpoint(extra-small) { [styles here] }`
 // 
 // 
-@mixin breakpoint(@point) {
+.breakpoint(@point) {
 	@if @point == extra-small {
         @media (min-width: @extra-small-start)  { @content; }
     }
@@ -67,7 +66,7 @@
 // Create variable-number grid columns given the value
 // for variable `@column-number` 
 // 
-@mixin grid-setup(@number: @column-number) {
+.grid-setup(@number: @column-number) {
 	// Assign percentage-based widths for columns
 	@for @i from 1 through @number {
 		.#{@column-prefix + @i} { width: 100% / @number * @i; }
@@ -89,7 +88,7 @@
 // Create proper `.push-` classes given the value
 // for variable `@column-number`
 // 
-@mixin push-setup(@number: @column-number) {
+.push-setup(@number: @column-number) {
 	@for @i from 1 to @number {
 		.push-#{@i} { left: 100% / @number * @i; }
 	}
@@ -104,7 +103,7 @@
 // Create proper `.pull-` classes given the value
 // for variable `@column-number`
 // 
-@mixin pull-setup(@number: @column-number) {
+.pull-setup(@number: @column-number) {
 	@for @i from 1 to @number {
 		.pull-#{@i} { right: 100% / @number * @i; }
 	}
