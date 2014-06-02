@@ -28,12 +28,12 @@
 //    `.vendor(border-radius, 4px);`
 // 
 // 
-.vendor(@property, @value...) {
-	-webkit-#{@property}: @value;
-	-moz-#{@property}: @value;
-	-ms-#{@property}: @value;
-	-o-#{@property}: @value;
-	#{@property}: @value;
+.vendor(@property, @value) {
+	-webkit-@{property}: @value;
+	-moz-@{property}: @value;
+	-o-@{property}: @value;
+	-ms-@{property}: @value;
+	@{property}: @value;
 }
 
 
@@ -46,15 +46,15 @@
 //    `@media @medium { styles here }`
 // 
 // 
-@extra-small: ~"only screen and (max-width:"@extra-small-start")";
-@small: ~"only screen and (min-width:"@small-start")";
-@medium: ~"only screen and (min-width:"@medium-start")";
-@large: ~"only screen and (min-width:"@large-start")";
-@extra-large: ~"only screen and (min-width:"@extra-large-start")";
+@extra-small:  ~"only screen and (max-width:"@extra-small-start")";
+@small: 	   ~"only screen and (min-width:"@small-start")";
+@medium: 	   ~"only screen and (min-width:"@medium-start")";
+@large: 	   ~"only screen and (min-width:"@large-start")";
+@extra-large:  ~"only screen and (min-width:"@extra-large-start")";
 @high-density: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
-              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
-              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
-              ~"only screen and (min-device-pixel-ratio: 1.5)";
+               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+               ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+               ~"only screen and (min-device-pixel-ratio: 1.5)";
 
 
 //
