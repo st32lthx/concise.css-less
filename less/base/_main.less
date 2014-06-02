@@ -2,7 +2,12 @@
     //------------------------------------//
     //  $MAIN
     //------------------------------------//
-    @if @global-border-box == true {
+    
+	// Variables
+	@font-size: ((@base-font-size/16px) * 1em);
+	@line-height-integer: unit(@line-height-ratio);
+	
+	@if @global-border-box == true {
         *{
             &,
             &:before,
@@ -16,7 +21,7 @@
 	body {
         background-color: #fff;
         color: @base-font-color;
-        font: normal normal #{(@base-font-size/16px)*1em}/#{@line-height-ratio} @base-font-family;
+        font: normal normal @font-size/@line-height-integer @base-font-family;
         margin: 0;
         
         text-rendering: optimizeLegibility;

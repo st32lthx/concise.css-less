@@ -2,15 +2,22 @@
 // Passing in a single value will create font-sizing in 
 // pixels, rems as well as a proper line-height.
 // 
-//    `.font-size(24px);`
+//    `.font-size(24px, false);`
 // 
 // 
-.font-size(@font-size) {
-    @pxValue: (@font-size);
-	@remValue: (@font-size / @base-font-size) * 1rem;
+.font-size(@font-size, @line-height: true) {
+    @px-value: (@font-size);
+	@rem-value: (@font-size / @base-font-size) * 1rem;
+	@line-height-value: ceil((@font-size / @base-line-height) * (@base-line-height / @font-size));
 	
-	font-size: ~"@{pxValue}px";
-	font-size: ~"@{remValue}";
+    font-size: ~"@{px-value}px";
+	font-size: @rem-value;
+	
+	.line-height(@boolean) when (@boolean = true) {
+		line-height: unit(@line-height-value);
+	}
+	
+	.line-height(@line-height);
 }
 
 
