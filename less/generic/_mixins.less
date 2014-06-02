@@ -6,17 +6,17 @@
 // 
 // 
 .font-size(@font-size, @line-height: true) {
-    @px-value: (@font-size);
+	@px-value: (@font-size);
 	@rem-value: (@font-size / @base-font-size) * 1rem;
 	@line-height-value: ceil((@font-size / @base-line-height) * (@base-line-height / @font-size));
-	
-    font-size: ~"@{px-value}px";
+
+	font-size: ~"@{px-value}px";
 	font-size: @rem-value;
-	
+
 	.line-height(@boolean) when (@boolean = true) {
 		line-height: unit(@line-height-value);
 	}
-	
+
 	.line-height(@line-height);
 }
 
@@ -62,20 +62,17 @@
 // for variable `@column-number` 
 // 
 .grid-setup(@number: @column-number) {
-	// Assign percentage-based widths for columns
-	@for @i from 1 through @number {
-		.#{@column-prefix + @i} { width: 100% / @number * @i; }
+	// Assign percentage-based widths for columns	
+	.grid-setup(@n, @i: 1) when (@i =< @n) {
+	  .@{column-prefix}@{i} { width: (@i * 100% / @n); }
+	  
+	  // Subtract gutter amount from columns
+	  .gutters .@{column-prefix}@{i} { width: (@i * 100% / @n - @gutters); }
+	  
+	  .grid-setup(@n, (@i + 1));
 	}
-	
-	@for @i from 1 through @number { 
-		// Style all but the last column
-		@if @i != @column-number {
-			.gutters .#{@column-prefix + @i} { width: 100% / @number * @i - @gutters; }
-		} @else {
-		// Ensure the last column has a width of 100%
-			.gutters .#{@column-prefix + @i} { width: 100% }
-		}
-	}
+
+	.grid-setup(@column-number);
 }
 
 
@@ -83,14 +80,12 @@
 // Create proper `.push-` classes given the value
 // for variable `@column-number`
 // 
-.push-setup(@number: @column-number) {
-	@for @i from 1 to @number {
-		.push-#{@i} { left: 100% / @number * @i; }
-	}
-	
-	@for @i from 1 to @number { 
-		.gutters .push-#{@i} { left: 100% / @number * @i - @gutters; }
-	}
+.push-setup(@n, @i: 1) when (@i =< @n) {
+	.push-@{i} { left: (@i * 100% / @n); }
+
+	.gutters .push-@{i} { left: (@i * 100% / @n - @gutters); }
+
+	.push-setup(@n, (@i + 1));
 }
 
 
@@ -98,12 +93,10 @@
 // Create proper `.pull-` classes given the value
 // for variable `@column-number`
 // 
-.pull-setup(@number: @column-number) {
-	@for @i from 1 to @number {
-		.pull-#{@i} { right: 100% / @number * @i; }
-	}
-	
-	@for @i from 1 to @number { 
-		.gutters .pull-#{@i} { right: 100% / @number * @i - @gutters; }
-	}
+.pull-setup(@n, @i: 1) when (@i =< @n) {
+	.pull-@{i} { right: (@i * 100% / @n); }
+
+	.gutters .pull-@{i} { right: (@i * 100% / @n - @gutters); }
+
+	.pull-setup(@n, (@i + 1));
 }

@@ -31,21 +31,27 @@
         
         
         // Row columns        
-		.grid-setup();
+		.grid-setup(@column-number);
         
-        @if @use-push == true {
-			// Push
+		
+		// Push
+        .use-push(@boolean) when (@boolean = true) {
 			[class*='push-'] { position: relative; }
 			
-			.push-setup(); 
+			.push-setup(@column-number); 
 		}
+		
+		.use-push(@use-push); 
         
-        @if @use-pull == true {
-			// Pull
+		
+		// Pull
+        .use-pull(@boolean) when (@boolean = true) {
 			[class*='pull-'] { position: relative; }
 			
-			.pull-setup();
+			.pull-setup(@column-number);
 		}
+		
+		.use-pull(@use-pull); 
     }
 
 
