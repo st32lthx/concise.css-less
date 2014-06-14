@@ -1,4 +1,4 @@
-.use-grid(@boolean) when (@boolean = true) {
+.grid(@boolean) when (@boolean = true) {
     //------------------------------------//
     //  $GRID
     //------------------------------------//
@@ -35,23 +35,23 @@
         
 		
 		// Push
-        .use-push(@boolean) when (@boolean = true) {
+        .push(@boolean) when (@boolean = true) {
 			[class*='push-'] { position: relative; }
 			
 			.push-setup(@column-number); 
 		}
 		
-		.use-push(@use-push); 
+		.push(@use-push); 
         
 		
 		// Pull
-        .use-pull(@boolean) when (@boolean = true) {
+        .pull(@boolean) when (@boolean = true) {
 			[class*='pull-'] { position: relative; }
 			
 			.pull-setup(@column-number);
 		}
 		
-		.use-pull(@use-pull); 
+		.pull(@use-pull); 
     }
 
 
@@ -70,4 +70,4 @@
     }
 }
 
-.use-grid(@use-grid); 
+.grid(@use-grid); 
