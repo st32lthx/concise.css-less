@@ -24,7 +24,7 @@
         visibility: hidden;
     }
 
-    .breakpoint(small) {
+    @media @small {
         .show-small,
         .hide-extra-small, 
         .hide-medium,
@@ -44,7 +44,7 @@
         }
     }
     
-    .breakpoint(medium) {
+    @media @medium {
         .show-medium,
         .hide-small,
         .hide-extra-small, 
@@ -64,7 +64,7 @@
         }
     }
 
-    .breakpoint(large) {
+    @media @large {
         .show-large,
         .hide-extra-small,
         .hide-small, 
@@ -84,7 +84,7 @@
         }
     }
     
-    .breakpoint(extra-large) {
+    @media @extra-large {
         .show-extra-large,
         .hide-extra-small,
         .hide-small, 
