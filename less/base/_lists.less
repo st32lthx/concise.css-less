@@ -32,7 +32,7 @@
         ol { list-style-type: lower-roman; }
     }
 
-    .breakpoint(small) { ul li ul { margin-left: 20px; } }
+    @media @small { ul li ul { margin-left: 20px; } }
 
 
     // Unstyled
@@ -70,7 +70,7 @@
         }
     }
 
-    .breakpoint(extra-small) {
+    @media @extra-small {
         .list-inline li {
             display: inline;
             margin-right: 25px;
@@ -105,10 +105,10 @@
 
     dd { margin-left: 0px; }
 
-    .breakpoint(small) {
+    @media @small {
         dl.dl-horizontal {
             overflow: hidden;
-            > {
+            & > {
                 dt {
                     width: 160px;
                     float: left;

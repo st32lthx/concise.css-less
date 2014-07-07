@@ -34,7 +34,7 @@
         .font-size(12px); 
     }
 
-    .breakpoint(small) {
+    @media @small {
         h1, .h1 {
             .font-size(32px); 
         }
@@ -60,7 +60,7 @@
         }
     }
 
-    .breakpoint(medium) {
+    @media @medium {
         h1, .h1 {
             .font-size(@h1-size); 
         }
@@ -111,7 +111,7 @@
         .font-size(32px); 
     }
 
-    .breakpoint(small) {
+    @media @small {
         .giga {
             .font-size(64px); 
         }
@@ -125,7 +125,7 @@
         }
     }
 
-    .breakpoint(large) {
+    @media @large {
         .giga {
             .font-size(80px); 
         }
@@ -139,7 +139,7 @@
         }
     }
 
-    .breakpoint(extra-large) {
+    @media @extra-large {
         .giga {
             .font-size(@giga-size); 
         }

@@ -4,13 +4,13 @@
     //------------------------------------//
     .container { width: 90%; }
 
-    .breakpoint(small) { .container { width: 620px; } }
+    @media @small { .container { width: 620px; } }
 
-    .breakpoint(medium) { .container { width: 768px; } }
+    @media @medium { .container { width: 768px; } }
 
-    .breakpoint(large) { .container { width: 960px; } }
+    @media @large { .container { width: 960px; } }
 
-    .breakpoint(extra-large) { .container { width: 1140px; } }
+    @media @extra-large { .container { width: 1140px; } }
 }
 
 .container(@use-container); 

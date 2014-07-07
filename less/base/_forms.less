@@ -15,13 +15,13 @@
         .vendor(box-sizing, border-box);
     }
 
-    .breakpoint(extra-small) { 
+    @media @extra-small { 
         input, 
         select, 
         textarea { width: 90%; } 
     }
 
-    .breakpoint(small) { 
+    @media @small { 
         input, 
         select { width: 300px; } 
     }
@@ -54,7 +54,7 @@
         }
     }
 
-    .breakpoint(small) {	
+    @media @small {	
         input[type="submit"] { width: auto; }
         
         textarea { width: 400px; }
@@ -102,7 +102,7 @@
     // Inline Form
     .form-inline label { width: auto; }
 
-    .breakpoint(small) {
+    @media @small {
         .form-inline {
             label {
                 display: inline-block;
@@ -134,7 +134,7 @@
         }
     }
 
-    .breakpoint(small) {
+    @media @small {
         .prepend {
             input, 
             select { width: 300px; }
