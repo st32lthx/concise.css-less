@@ -13,14 +13,14 @@
     }
 
     [class*='#{@column-prefix}'] {
-        .vendor(background-clip, padding-box !important);
+        .vendor(background-clip, padding-box) !important;
         
         &.right { float: right; }
         
         img { max-width: 100%; }
     }
 
-    .breakpoint(small) {
+    @media @small {
         [class*='#{@column-prefix}'] { float: left; }
         
         .gutters [class*='#{@column-prefix}'] {
