@@ -108,18 +108,17 @@
     @media @small {
         dl.dl-horizontal {
             overflow: hidden;
-            & > {
-                dt {
-                    width: 160px;
-                    float: left;
-                    clear: both;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-                
-                dd { margin-left: 180px; }
+            
+            > dt {
+                width: 160px;
+                float: left;
+                clear: both;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
+            
+            > dd { margin-left: 180px; }
         }
     }
 }

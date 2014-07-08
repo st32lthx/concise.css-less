@@ -719,7 +719,7 @@ dd {
   dl.dl-horizontal {
     overflow: hidden;
   }
-  dl.dl-horizontal dt {
+  dl.dl-horizontal > dt {
     width: 160px;
     float: left;
     clear: both;
@@ -727,7 +727,7 @@ dd {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  dl.dl-horizontal dd {
+  dl.dl-horizontal > dd {
     margin-left: 180px;
   }
 }
