@@ -8,7 +8,7 @@
 .font-size(@font-size, @line-height: true) {
     @px-value: (@font-size);
     @rem-value: (@font-size / @base-font-size) * 1rem;
-    @line-height-value: ceil((@font-size / @base-line-height) * (@base-line-height / @font-size));
+    @line-height-value: ceil(@font-size / @base-line-height) * (@base-line-height / @font-size);
 
     font-size: ~"@{px-value}";
     font-size: @rem-value;
@@ -31,8 +31,8 @@
 .vendor(@property, @value) {
     -webkit-@{property}: @value;
     -moz-@{property}: @value;
-    -o-@{property}: @value;
     -ms-@{property}: @value;
+    -o-@{property}: @value;
     @{property}: @value;
 }
 
