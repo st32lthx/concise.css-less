@@ -20,7 +20,7 @@ Check out our documentation here: [http://concisecss.com/documentation](http://c
 
 ### Changelog
 
-You can view an up-to-date changelog in our GitHub wiki: [https://github.com/ConciseCSS/concise.css/wiki/Changelog](https://github.com/ConciseCSS/concise.css-less/wiki/Changelog)
+You can view an up-to-date changelog in our GitHub wiki: [https://github.com/ConciseCSS/concise.css-less/wiki/Changelog](https://github.com/ConciseCSS/concise.css-less/wiki/Changelog)
 
 Pre-Processors
 -------------
