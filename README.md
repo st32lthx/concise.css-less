@@ -9,7 +9,7 @@ Quickstart
 
 It's easy to get started with Concise:
 
-- [Download the latest release](https://github.com/ConciseCSS/concise.css/archive/master.zip)
+- [Download the latest release](https://github.com/ConciseCSS/concise.css-less/archive/master.zip)
 - [Read our quickstart guide](http://concisecss.com/get-started/getting-started.php)
 
 Documentation
@@ -17,6 +17,10 @@ Documentation
 What would a project be without gread documentation? Concise has documentation for everything that is included in the framework. If you see something that is missing or incorrect, don't hesitate to open up an issue on our GitHub repo.
 
 Check out our documentation here: [http://concisecss.com/documentation](http://concisecss.com/documentation)
+
+### Changelog
+
+You can view an up-to-date changelog in our GitHub wiki: [https://github.com/ConciseCSS/concise.css/wiki/Changelog](https://github.com/ConciseCSS/concise.css-less/wiki/Changelog)
 
 Pre-Processors
 -------------
