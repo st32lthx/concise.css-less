@@ -10,8 +10,8 @@ Quickstart
 It's easy to get started with Concise:
 
 - [Download the latest release](https://github.com/ConciseCSS/concise.css-less/archive/master.zip)
-- Clone the repo: `git clone https://github.com/ConciseCSS/concise.css.git`
-- Install with [Bower](http://bower.io/): `bower install concise`
+- Clone the repo: `git clone https://github.com/ConciseCSS/concise.css-less.git`
+- Install with [Bower](http://bower.io/): `bower install concise-less`
 
 After you download or install the package, [read our quickstart guide](http://concisecss.com/get-started/getting-started.php) to get up and running.
 
