@@ -1,9 +1,21 @@
 {
-    "name": "Concise-LESS",
+    "name": "concise-less",
+    "description": "A lightweight front-end framework that provides functionality without the bloat.",
     "version": "1.0.0",
     "ignore": [
         ".gitignore",
         "LICENSE",
         "README.md"
-    ]
+    ],
+    "keywords": [
+        "css",
+        "js",
+        "less",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "framework",
+        "web"
+    ],
+    "homepage": "http://concisecss.com"
 }
