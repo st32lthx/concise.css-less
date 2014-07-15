@@ -1,10 +1,10 @@
 //
-// Passing in a single value will create font-sizing in 
+// Passing in a single value will create font-sizing in
 // pixels, rems as well as a proper line-height.
-// 
+//
 //    `.font-size(24px, false);`
-// 
-// 
+//
+//
 .font-size(@font-size, @line-height: true) {
     @px-value: (@font-size);
     @rem-value: (@font-size / @base-font-size) * 1rem;
@@ -21,13 +21,13 @@
 }
 
 
-// 
-// Proper vendor prefixes are created just by 
+//
+// Proper vendor prefixes are created just by
 // passing a property value and size value.
-// 
+//
 //    `.vendor(border-radius, 4px);`
-// 
-// 
+//
+//
 .vendor(@property, @value) {
     -webkit-@{property}: @value;
     -moz-@{property}: @value;
@@ -38,14 +38,14 @@
 
 
 //
-// By passing in one of the pre-defined media queries that 
-// are packaged with Concise by default, you can easily 
-// create styles that are built from the ground-up to be 
+// By passing in one of the pre-defined media queries that
+// are packaged with Concise by default, you can easily
+// create styles that are built from the ground-up to be
 // mobile friendly.
-// 
+//
 //    `@media @medium { styles here }`
-// 
-// 
+//
+//
 @extra-small:  ~"(min-width: @{extra-small-start})";
 @small: 	   ~"(min-width: @{small-start})";
 @medium: 	   ~"(min-width: @{medium-start})";
@@ -59,16 +59,21 @@
 
 //
 // Create variable-number grid columns given the value
-// for variable `@column-number` 
-// 
+// for variable `@column-number`
+//
 .grid-setup(@number: @column-number) {
-    // Assign percentage-based widths for columns	
+    // Assign percentage-based widths for columns
     .grid-setup(@n, @i: 1) when (@i =< @n) {
       .@{column-prefix}@{i} { width: (@i * 100% / @n); }
-      
+
       // Subtract gutter amount from columns
-      .gutters .@{column-prefix}@{i} { width: (@i * 100% / @n - @gutters); }
-      
+      @gutter-column-width: (100% - @gutters * (@n - 1)) / @n;
+
+      .gutters .@{column-prefix}@{i} {
+          width: @gutter-column-width * @i + @gutters * (@i - 1);
+          content: @gutters * (@i - 1);
+      }
+
       .grid-setup(@n, (@i + 1));
     }
 
@@ -79,7 +84,7 @@
 //
 // Create proper `.push-` classes given the value
 // for variable `@column-number`
-// 
+//
 .push-setup(@n, @i: 1) when (@i =< @n) {
     .push-@{i} { left: (@i * 100% / @n); }
 
@@ -92,7 +97,7 @@
 //
 // Create proper `.pull-` classes given the value
 // for variable `@column-number`
-// 
+//
 .pull-setup(@n, @i: 1) when (@i =< @n) {
     .pull-@{i} { right: (@i * 100% / @n); }
 
