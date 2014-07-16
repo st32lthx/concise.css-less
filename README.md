@@ -81,3 +81,5 @@ License
 -------------
 
 Code released under the [MIT license](https://github.com/ConciseCSS/concise.css/blob/master/LICENSE). Documentation released under [Creative Commons](http://creativecommons.org/licenses/by-sa/4.0/).
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/bac884796f8543f690104923eea7a40d "githalytics.com")](http://githalytics.com/ConciseCSS/concise.css-less)
