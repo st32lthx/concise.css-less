@@ -1,4 +1,4 @@
-[<img src="http://i.imgur.com/ihzCgEr.png">](http://concisecss.com/)
+[<img src="http://i.imgur.com/VOm0dTR.png">](http://concisecss.com/)
 ===========
 [![Gitter chat](https://badges.gitter.im/concisecss.png)](https://gitter.im/concisecss)
 [![Bower version](https://badge.fury.io/bo/concise-less.svg)](http://badge.fury.io/bo/concise-less)
