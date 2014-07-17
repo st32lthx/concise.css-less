@@ -1,5 +1,5 @@
 {
-  "name": "ConciseCSS/concise.css-less",
+  "name": "concisecss/concise.css-less",
   "description": "A lightweight front-end framework that provides functionality without the bloat.",
   "keywords": [
     "css",
@@ -23,6 +23,6 @@
   },
   "license": "MIT",
   "replace": {
-    "ConciseCSS/concise.css-less": "self.version"
+    "concisecss/concise.css-less": "self.version"
   }
 }
