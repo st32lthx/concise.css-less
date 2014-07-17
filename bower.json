@@ -1,11 +1,12 @@
 {
     "name": "concise-less",
     "description": "A lightweight front-end framework that provides functionality without the bloat.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "ignore": [
         ".gitignore",
         "LICENSE",
-        "README.md"
+        "README.md",
+        "package.json"
     ],
     "keywords": [
         "css",
