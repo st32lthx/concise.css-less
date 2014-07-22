@@ -7,17 +7,13 @@
   @font-size: ((@base-font-size/16px) * 1em);
   @line-height-integer: unit(@line-height-ratio);
   
-  .border-box(@boolean) when (@boolean = true) {
-    *{
-      &,
-      &:before,
-      &:after {
-        .vendor(box-sizing, border-box);
-      }
+  *{
+    &,
+    &:before,
+    &:after {
+      .vendor(box-sizing, border-box);
     }
   }
-  
-  .border-box(@global-border-box); 
 
   html, 
   body {

@@ -1,8 +1,8 @@
-.colors(@boolean) when (@boolean = true) {
   //------------------------------------
   //  COLORS
   //------------------------------------
-  
+
+.use-bg-colors(@boolean) when (@boolean = true) {  
   // Background colors
   .bg-white { background-color: @bg-white !important; }
 
@@ -27,8 +27,12 @@
   .bg-light-red { background-color: @bg-light-red !important; }
 
   .bg-red { background-color: @bg-red !important; }
+}
 
+.use-bg-colors(@use-bg-colors);
+  
 
+.use-type-colors(@boolean) when (@boolean = true) {
   // Type colors 
   .color-white { color: @color-white; }
 
@@ -45,4 +49,4 @@
   .color-red { color: @color-red; }
 }
 
-.colors(@use-colors); 
+.use-type-colors(@use-type-colors); 
